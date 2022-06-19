@@ -32,19 +32,6 @@ body {
   display: none;
   grid-area: footer;
 }
-#formContactMe {
-  display: flex;
-  flex-direction: column;
-}
-#txtAreaComments {
-  margin-bottom: 10%;
-}
-.txtForForm {
-  margin-bottom: 10%;
-}
-#personalPictureFigure {
-  margin-bottom: 5%;
-}
 .menu {
    font-size: 90%;
    margin: 0;
@@ -258,8 +245,9 @@ body {
     align-items: center;
     text-align: center;
     flex-flow: column;
+    height: 100%;
   }
-  /* .currentSectionOpen {
+  .currentSectionOpen {
     animation: fadeIn 0.5s ease-in-out;
     -webkit-animation: fadeIn 0.5s ease-in-out;
     -moz-animation: fadeIn 0.5s ease-in-out;
@@ -268,7 +256,8 @@ body {
     align-items: center;
     text-align: center;
     flex-flow: column;
-  } */
+    height: 100%;
+  }
   @keyframes fadeIn {
     0%, 100% {
       opacity: 0;
@@ -280,9 +269,9 @@ body {
   .currentSectionOpen h2 {
     font-size: 150%;
   }
-  .currentSectionOpen .underlineForH2 {
+  /* .currentSectionOpen .underlineForH2 {
     background: red;
-    height: 25%;
+    height: 100%;
     display: block;
     position: relative;
     width: 8%;
@@ -296,7 +285,7 @@ body {
     height: 25%;
     position: relative;
     width: 50%;
-  }
+  } */
 
   /* 'About' page */
   #about {
@@ -443,9 +432,7 @@ body {
   .projectDiv figure {
     text-align: center;
     margin: 0 auto;
-    
-    /* width: 95%; */
-    /* border: 4px solid black; */
+    width: 95%;
     display: block;
   }
   .projectDiv figure img {
