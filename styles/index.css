@@ -8,7 +8,6 @@
 }
 
 body {
-  background: url("../images/background.jpg");
   display: grid;
   height: 100vh;
   max-height: 100vh;
@@ -33,6 +32,19 @@ body {
   display: none;
   grid-area: footer;
 }
+#formContactMe {
+  display: flex;
+  flex-direction: column;
+}
+#txtAreaComments {
+  margin-bottom: 10%;
+}
+.txtForForm {
+  margin-bottom: 10%;
+}
+#personalPictureFigure {
+  margin-bottom: 5%;
+}
 .menu {
    font-size: 90%;
    margin: 0;
@@ -44,6 +56,12 @@ body {
    /* justify-content: center; centers vertically; along the main axis */
    /* centers horizontally; along the cross axis */
    align-items: flex-start;
+}
+#menu_links_image {
+  margin-left: 10%;
+  display: none;
+  width: 25%;
+  height: 25%;
 }
 .menu li a {
   padding: 50%;
@@ -232,9 +250,6 @@ body {
     font-size: 1em;
   }
   .websiteSection {
-    display: none;
-  }
-  .currentSectionOpen {
     animation: fadeIn 0.5s ease-in-out;
     -webkit-animation: fadeIn 0.5s ease-in-out;
     -moz-animation: fadeIn 0.5s ease-in-out;
@@ -244,6 +259,16 @@ body {
     text-align: center;
     flex-flow: column;
   }
+  /* .currentSectionOpen {
+    animation: fadeIn 0.5s ease-in-out;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-flow: column;
+  } */
   @keyframes fadeIn {
     0%, 100% {
       opacity: 0;
@@ -515,8 +540,7 @@ body {
     "header main main main main main";
   }
   #header { 
-    border-right: solid #e0e0eb;
-    border-right-width: 2%;
+    border-right: 1px solid #dcdcdc;
     grid-area: header;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -527,6 +551,13 @@ body {
     }
     #main {
     grid-area: main;
+    }
+    #menu_links_image {
+      margin-bottom: 45%;
+      margin-left: 10%;
+      display: block;
+      width: 35%;
+      height: 35%;
     }
     .header li a {
       margin: 20px;

@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
         link.classList.remove(t);
     }
     // Collapse menu if a link is selected
-    if (window.innerWidth <= 768) {
-        $('.menu a').on("click", function() {
-            $('.menu-btn').prop('checked', false);
-        });
-    }
+    // if (window.innerWidth <= 768) {
+    //     $('.menu a').on("click", function() {
+    //         $('.menu-btn').prop('checked', false);
+    //     });
+    // }
     
     // For the typewriter-like text
 
