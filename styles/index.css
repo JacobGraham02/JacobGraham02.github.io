@@ -45,10 +45,7 @@ body {
    align-items: flex-start;
 }
 #menu_links_image {
-  margin-left: 10%;
   display: none;
-  width: 25%;
-  height: 25%;
 }
 .menu li a {
   padding: 50%;
@@ -237,15 +234,7 @@ body {
     font-size: 1em;
   }
   .websiteSection {
-    animation: fadeIn 0.5s ease-in-out;
-    -webkit-animation: fadeIn 0.5s ease-in-out;
-    -moz-animation: fadeIn 0.5s ease-in-out;
-    -o-animation: fadeIn 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-flow: column;
-    height: 100%;
+    display: none;
   }
   .currentSectionOpen {
     animation: fadeIn 0.5s ease-in-out;
