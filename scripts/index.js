@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const MENU_LINKS = document.querySelectorAll('.menu a');
-    const WEBSITE_SECTION = document.querySelectorAll('.websiteSection');
-    const CURRENT_SECTION = "currentSectionOpen";
-    const CURRENT_LINK_VISITING = "addActiveLinkStyle";
-    const PROJECT_DIVS = document.querySelectorAll('.projectDiv');
+    const WEBSITE_SECTION = document.querySelectorAll('.website_section');
+    const CURRENT_SECTION = "current_section_open";
+    const CURRENT_LINK_VISITING = "add_active_link_style";
+    const PROJECT_DIVS = document.querySelectorAll('.project_div');
 
     closeMenuWhenLinkClicked();
     setSectionToActiveWhenClicked();
@@ -43,12 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function removeStylingFromActiveLink(link, t) {
         link.classList.remove(t);
     }
-    // Collapse menu if a link is selected
-    // if (window.innerWidth <= 768) {
-    //     $('.menu a').on("click", function() {
-    //         $('.menu-btn').prop('checked', false);
-    //     });
-    // }
     
     // For the typewriter-like text
 
