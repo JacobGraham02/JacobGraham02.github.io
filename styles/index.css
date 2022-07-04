@@ -286,6 +286,14 @@ body {
     line-height: 150%;
     width: 95%;
   }
+  .about_me_paragraph {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  .about_me_paragraph_span {
+    font-weight: bold;
+  }
   #about_section_intro {
     margin-top: 2%;
     font-size: 120%;
@@ -439,6 +447,7 @@ body {
   #skills_container {
     margin: 10%;
     width: 80%;
+    height: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -446,27 +455,30 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    flex-basis: calc(100% / 3);
   }
 
   #full_stack_development {
-    height: 400px;
-    width: 90%;
     padding: 2%;
     margin: 2%;
   }
   #UIUX_design {
-    height: 400px;
-    width: 90%;
+    padding: 2%;
+    margin: 2%;
+  }
+  #mobile_application_developer {
     padding: 2%;
     margin: 2%;
   }
   .skill_div {
     /* border: solid #cccccc; */
+    width: 25%;
     -webkit-transition: box-shadow 0.25s;
     transition: box-shadow 0.25s;
     border-radius: 8%;
     border: 2px solid #bfbfbf;
     background: white;
+    height: fit-content;
   }
   .skill_div figure {
     margin: 0 auto;
@@ -595,16 +607,16 @@ body {
     display: -webkit-flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
   }
   #full_stack_development {
     margin: 0;
-    flex-basis: calc(100% / 3);
   }
   #UIUX_design {
-    flex-basis: calc(100% / 3);
     margin: 0;
   }
+  #mobile_application_developer {
+    margin: 0;
+  } 
   .skill_div i {
     font-size: 400%;
   }
