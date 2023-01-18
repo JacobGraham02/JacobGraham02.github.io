@@ -3,7 +3,7 @@ const WEBSITE_SECTION = document.querySelectorAll('.website_section');
 const CURRENT_SECTION = "current_section_open";
 const CURRENT_LINK_VISITING = "add_active_link_style";
 const PROJECT_DIVS = document.querySelectorAll('.project_div');
-const HOME_PAGE_SENTENCES = ['Computer science student', 'Junior full-stack developer', 'Junior UI/UX designer', 'Junior software quality engineer'];
+const HOME_PAGE_SENTENCES = ['Computer science student', 'Junior developer', 'Junior designer', 'Junior QA', 'Junior DevOps engineer'];
 
 const typeit_element = new TypeIt("#text", {
     speed: 100,
