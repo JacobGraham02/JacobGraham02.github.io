@@ -331,6 +331,7 @@ body {
     padding: 2%;
   }
   .learning_article {
+    word-spacing: 100%;
     padding: 2%;
   }
   button {
