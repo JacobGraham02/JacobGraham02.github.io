@@ -187,10 +187,7 @@ body {
     letter-spacing: 1px;
   }
   #picture_of_me {
-    /* offset-x, offset-y, blur-radius, spread-radius, color */
-    -webkit-box-shadow: 0 0 4px 4px #333;
-    box-shadow: 0 0 4px 4px #333;
-    border-radius: 50%;
+    border-radius: 10%;
   }
   #social_media {
     display: flex;
