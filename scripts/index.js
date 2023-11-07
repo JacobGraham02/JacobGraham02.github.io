@@ -3,7 +3,12 @@ const website_section = document.querySelectorAll('.website_section');
 const current_section = "current_section_open";
 const current_link_visiting = "add_active_link_style";
 const project_divs = document.querySelectorAll('.project_div');
-const home_page_sentences = ['Computer science student', 'Junior developer', 'Junior designer', 'Junior QA', 'Junior DevOps engineer'];
+const about_page_button = document.querySelector("#getResumeButton");
+const home_page_sentences = ['Honours Computer Science student', 'UI/UX Developer', 'Mobile application developer', 'Desktop application developer', 'Quality Engineer'];
+
+about_page_button.addEventListener('click', () => {
+    window.location.href='https://www.dropbox.com/scl/fi/6qujtjovfp4w231t42g8z/Resume.pdf?rlkey=0klpqeinp4a8l4yc5sls54n52&dl=0';
+});
 
 const typeit_element = new TypeIt("#text", {
     speed: 100,

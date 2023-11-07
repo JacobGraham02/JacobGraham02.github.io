@@ -176,8 +176,8 @@ body {
     color: black;
     background-image: linear-gradient(to bottom, black, #003399);
     background-clip: text;
-    font-weight: bold;
-    -webkit-text-stroke-width: 0.5px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -189,27 +189,84 @@ body {
   #picture_of_me {
     border-radius: 10%;
   }
+  #social_media_container {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   #social_media {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
   }
-  #social_media_container {
-    display: flex;
+  
+  #getResumeButton {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     justify-content: center;
+    line-height: 1.25;
+    padding: 10%;
+    width: fit-content;
+    margin: 0;
+    min-height: 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+  }
+  
+  #getResumeButton:hover,
+  #getResumeButton:focus {
+    transition: background 0.25 ease-in-out;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  
+  #getResumeButton:hover {
+    background: #efeff5;
+    transform: translateY(-1px);
+  }
+  
+  #getResumeButton:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
+  #getResumeButtonContainer {
+    display: flex;
+    width: 10%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+
   }
   #social_media figure a {
-    padding: 10px;
     margin: 10px;
-    background: red;
+    padding: 10px;
+    background: black;
     color: white;
     text-decoration: none;
     border-radius: 50%;
-    transition: padding 0.25s ease-in-out;
-    -webkit-transition: padding 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out;
+    -webkit-transition: background 0.25s ease-in-out;
   }
   #social_media figure a:hover {
-    padding: 11px;
+    background: gray;
   }
   /* For the typewriter-like text */
   #container {
@@ -221,15 +278,16 @@ body {
     font-size: 150%;
     display: inline-block;
     color: black;
+    font-weight: bold;
     background-image: linear-gradient(to bottom, gray, black);
     background-clip: text;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: darkslategray;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: black; 
     text-shadow: 1px 1px 1px darkslategray;
-    font-size: 1em;
+    font-size: 120%;
   }
   .website_section {
     display: none;
@@ -262,15 +320,12 @@ body {
     line-height: 1.5;
     font-size: 75%;
   }
-  #about #education_container {
-    margin: 0 auto;
-  }
   #about_me_article {
     line-height: 150%;
     width: 95%;
   }
   #about #learning_container {
-    margin: 0 auto;
+    margin-top: 5%;
   }
   #about .about_me_paragraph {
     text-align: center;
@@ -286,7 +341,6 @@ body {
   #about_section_intro {
     margin-top: 2%;
     font-size: 120%;
-    margin-bottom: 2%;
   }
   /* The span containing the words 'Computer Science student' on 'About' page */
   #computer_science_student_sentence {
@@ -309,11 +363,6 @@ body {
     text-align: center;
   }
   #learning_container {
-    /* -webkit-box-shadow: 0 0 3px black;
-    -moz-box-shadow: 0 0 3px black;
-    box-shadow: 0 0 3px black;
-    border-radius: 3%; */
-    margin-top: 1%;
     text-align: start;
     width: 90%;
     height: fit-content;
@@ -333,7 +382,6 @@ body {
     display: block;
   }
   #education_and_learning_container {
-    margin: 2%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -346,7 +394,6 @@ body {
     line-height: 1.2;
   }
   .education_heading {
-    border-top: 1px solid #efeff5;
     text-align: center;
   }
   
@@ -520,14 +567,6 @@ body {
       height: 68vh;
       flex-direction: row;
     }
-    #education_container {
-      margin-bottom: 0;
-      margin-right: 1%;
-    }
-    #learning_container {
-      margin-top: 0;
-      margin-left: 1%;
-    }
     #about .about_me_paragraph {
       text-align: left;
     }
@@ -537,7 +576,11 @@ body {
       width: 95%;
       flex-basis: 100%; 
     }
-  
+
+    #about #learning_container {
+      margin-top: 0;
+    }
+
     .project_div .project_description {
       flex: 1;
       padding: 10px;
@@ -555,5 +598,9 @@ body {
     .project_div figure img {
       height: 100%;
       width: 100%;
+    }
+
+    #getResumeButton {
+      padding: 10%;
     }
   }
