@@ -49,8 +49,15 @@ body {
   display: none;
 }
 .menu li a {
-  padding: 50%;
+  padding: 20px 20px; /* Adjusts padding for better spacing */
 }
+
+/* Grad photo on main home page */
+#grad_photo {
+  width: 30%;
+  height: 30%;
+}
+
 /* menu when being closed on mobile version */
   .header li a {
     background-image: linear-gradient(to bottom, #003366, black);
@@ -140,8 +147,11 @@ body {
   .header .menu-btn {
   display: none;
   }
+  .header .menu-btn:checked ~ .header {
+    height: 0;
+  }
   .header .menu-btn:checked ~ .menu {
-  max-height: 100%;
+    max-height: 100%;
   }
   .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
@@ -183,7 +193,6 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-text-shadow: 1px 1px 1px black;
     text-shadow: 1px 1px 1px black;
-    font-size: 150%;
     letter-spacing: 1px;
   }
   #picture_of_me {
@@ -269,16 +278,16 @@ body {
     background: gray;
   }
   /* For the typewriter-like text */
-  #container {
+  #typeit_text_container {
     margin-bottom: 2%;
     height: 4%;
     text-align: center;
   }
-  #text {
-    font-size: 150%;
+  #text_container {
+    font-size: 90%;
+    font-weight: normal;
     display: inline-block;
     color: black;
-    font-weight: bold;
     background-image: linear-gradient(to bottom, gray, black);
     background-clip: text;
     -webkit-text-stroke-width: 0.2px;
@@ -299,7 +308,6 @@ body {
     -o-animation: fadeIn 0.5s ease-in-out;
     display: flex;
     align-items: center;
-    text-align: center;
     flex-flow: column;
     height: 100%;
   }
@@ -317,11 +325,14 @@ body {
 
   /* 'About' page */
   #about {
+    text-align: center;
     line-height: 1.5;
     font-size: 75%;
   }
+  #about_section_intro {
+    margin-bottom: 2%;
+  }
   #about_me_article {
-    line-height: 150%;
     width: 95%;
   }
   #about #learning_container {
@@ -335,6 +346,7 @@ body {
     font-size: 16px;
     margin-bottom: 2%;
   }
+  
   .about_me_paragraph_span {
     font-weight: bold;
   }
@@ -348,19 +360,11 @@ body {
     color: red;
   }
   #education_container {
-    /* -webkit-box-shadow: 0 0 3px black;
-    -moz-box-shadow: 0 0 3px black; 
-    box-shadow: 0 0 3px black; */
     border-radius: 3%;
     margin-bottom: 2%;
-    /* background: whitesmoke; */
     width: 90%;
     text-align: start;
-    /* text-indent: 3%; */
     height: fit-content;
-  }
-  #education_container * {
-    text-align: center;
   }
   #learning_container {
     text-align: start;
@@ -382,8 +386,6 @@ body {
     display: block;
   }
   #education_and_learning_container {
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -397,13 +399,12 @@ body {
     text-align: center;
   }
   
+  /* Projects page */
   #projects {
     font-size: 75%;
+    margin: 0
   }
 
-  #projects #projects_container {
-    margin: 0 auto;
-  }
   .project_description p strong {
     font-size: 24px;
   }
@@ -423,6 +424,7 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    margin: 2% auto;
   }
   .project_div {
     width: 40%;
@@ -497,6 +499,120 @@ body {
   .topics {
     line-height: 150%;
   }
+
+/* Education page */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+.education_article {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education_content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 0;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
+
+.education_content_list {
+  list-style-type: none;
+}
+
+.education_content_list li {
+  margin: 5%;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin-right: 20px; /* Spacing between the timeline bar and the items */
+}
+
+.timeline-item {
+  position: relative;
+  width: 80%;
+  min-width: 40%;
+  padding: 10px;
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-top: 20px; /* Space between items */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks content vertically on mobile */
+  align-items: flex-start; /* Center-aligns the content */
+}
+
+.timeline-item:before {
+  content: ''; 
+  position: absolute;
+  top: 50%; 
+  left: -30px; 
+  transform: translateY(-50%); 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  background: white;
+  border: 1px solid black; 
+}
+
+.year {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  line-height: 30px; /* Center text vertically */
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 75%; /* Adjust font size as needed */
+  z-index: 1; /* Ensure the text appears above the circle */
+}
+
+
+.year {
+  font-weight: bold;
+}
+
+.timeline-item-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.timeline:not(:first-child) {
+  margin-top: 100px; /* Applies top margin only to items that are not the first child */
+}
+
+.timeline-item {
+  flex-direction: row;
+}
+
+.timeline-item.active {
+  border: 1px solid #dcdcdc;
+}
+
+
   /* for desktop */
 @media screen and (min-width: 1199px) {
   body {
@@ -538,6 +654,39 @@ body {
     max-height: 100%;
     grid-area: footer;
     }
+
+    /* Education page */
+    .timeline-item-container {
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .timeline-item-container .education_content {
+      display: flex;
+    }
+
+    .timeline-item {
+      max-width: 40%;
+    }
+
+    .education_content {
+      justify-content: left;
+      align-items: flex-start;
+      margin-left: 1%;
+    }
+
+    .education_content_list {
+      justify-content: left;
+      align-items: left;
+      text-align: left;
+    }
+
+    .education_content_list li {
+      margin: 0;
+    }
+
     .header .menu {
     font-size: 60%;
     width: 75%;

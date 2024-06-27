@@ -1,57 +1,86 @@
-const menu_links = document.querySelectorAll('.menu a');
-const website_section = document.querySelectorAll('.website_section');
-const current_section = "current_section_open";
-const current_link_visiting = "add_active_link_style";
-const project_divs = document.querySelectorAll('.project_div');
-const about_page_button = document.querySelector("#getResumeButton");
-const home_page_sentences = ['Honours Computer Science student', 'UI/UX Developer', 'Mobile application developer', 'Desktop application developer', 'Quality Engineer'];
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.overlay');
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+    const menu_links = document.querySelectorAll('.menu a');
+    const website_section = document.querySelectorAll('.website_section');
+    const current_section = "current_section_open";
+    const current_link_visiting = "add_active_link_style";
+    const project_divs = document.querySelectorAll('.project_div');
+    const home_page_sentences = ['Honours Computer Science graduate', 'Mobile application developer', 'Quality Engineer'];
 
-about_page_button.addEventListener('click', () => {
-    window.location.href='https://www.dropbox.com/scl/fi/6qujtjovfp4w231t42g8z/Resume.pdf?rlkey=0klpqeinp4a8l4yc5sls54n52&dl=0';
-});
+    menuBtn.addEventListener('change', function() {
+        if (menuBtn.checked) {
+            menu.style.left = '0'; // Slide in the menu
+        } else {
+            menu.style.left = '-100%'; // Hide the menu
+        }
+    });
 
-const typeit_element = new TypeIt("#text", {
-    speed: 100,
-    loop: true
-});
 
-for (const sentence_string of home_page_sentences) {
-    typeit_element.type(sentence_string).pause(500).delete(sentence_string.length).pause(500);
-}
-typeit_element.go();
+    const typeit_element = new TypeIt("#text", {
+        speed: 100,
+        loop: true
+    });
+    
+    for (const sentence_string of home_page_sentences) {
+        typeit_element.type(sentence_string).pause(500).delete(sentence_string.length).pause(500);
+    }
+    typeit_element.go();
+    
+    closeMenu();
+    setSectionToActive();
+    setDefaultLinkStyling();
+    
+    function setDefaultLinkStyling(){
+        menu_links[0].classList.add(current_link_visiting);
+    }
+    
+    function closeMenu() {
+        menu_links.forEach(link => 
+            link.addEventListener("click", function() {
+                menuBtn.checked = false;
+        }))
+    }
 
-close_menu_when_link_clicked();
-set_section_to_active_when_clicked();
-set_default_link_styling();
-
-function set_default_link_styling(){
-    menu_links[0].classList.add(current_link_visiting);
-}
-
-function close_menu_when_link_clicked() {
-    menu_links.forEach(link => link.addEventListener("click", function() {
-        document.querySelector(".menu-btn").checked = false;
-    }))
-}
-function set_section_to_active_when_clicked() {
-    for (let i = 0; i < menu_links.length; i++) {
-        menu_links[i].addEventListener('click', function() {
-            website_section.forEach(section => remove_class_from_section(section, current_section));
-            menu_links.forEach(link =>  remove_styling_from_active_link(link, current_link_visiting));
-            add_class_to_section(website_section[i], current_section);
-            add_styling_to_active_link(menu_links[i], current_link_visiting);
+    function setSectionToActive() {
+        menu_links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetSectionId = link.getAttribute('data-section');
+                const targetSection = document.querySelector(targetSectionId);
+                
+                website_section.forEach(section => removeClassFromSection(section, current_section));
+                menu_links.forEach(link =>  removeStylingFromActiveLink(link, current_link_visiting));
+                
+                addClassToSection(targetSection, current_section);
+                addStylingToActiveLink(link, current_link_visiting);
+            });
         });
     }
-}
-function add_class_to_section(section, t) {
-    section.classList.add(t);
-}
-function remove_class_from_section(section, t) {
-    section.classList.remove(t);
-}
-function add_styling_to_active_link(link, t) {
-    link.classList.add(t);
-}
-function remove_styling_from_active_link(link, t) {
-    link.classList.remove(t);
-}
+
+    function addClassToSection(section, t) {
+        section.classList.add(t);
+    }
+    function removeClassFromSection(section, t) {
+        section.classList.remove(t);
+    }
+    function addStylingToActiveLink(link, t) {
+        link.classList.add(t);
+    }
+    function removeStylingFromActiveLink(link, t) {
+        link.classList.remove(t);
+    }
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove active class from all items
+            document.querySelectorAll('.timeline-item').forEach(innerItem => {
+                innerItem.classList.remove('active');
+            });
+            // Add active class to the clicked item
+            item.classList.add('active');
+        });
+    });
+    
+});

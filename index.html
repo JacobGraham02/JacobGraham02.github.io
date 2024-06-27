@@ -5,35 +5,32 @@
             <title>Jacob Graham Portfolio</title>
             <meta name="author" content="Jacob Graham, jakegraham54@gmail.com"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <meta name="description" content="A Portfolio I have built to show the skills and experiences I have which I will utilize for the benefit of you and your company"/>
-            <meta name="keywords" content="Jacob Graham Portfolio, Jacob Graham University, Jacob Graham College, 
-            HTML, CSS, JavaScript, Java, TypeScript, PHP, MySQL, NoSQL, Projects, Lakehead University, Georgian College, Git, Linux, Docker, Maven, Jira, Confluence, 
-            Microsoft Office, Data Structures, Algorithms, MVC, Java Spring, Node.js, Express.js"/>
-            <meta name="author" content="Jacob Graham"/>
+            <meta name="description" content="A road map of my academic and professional career"/>
+            <meta name="keywords" content="Jacob Graham Portfolio"/>
             <meta name="robots" content="index,follow"/>
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Jacob Graham Portfolio"/>
-            <meta property="og:description" content="A Portfolio I have built to show the skills and experiences I have which I will utilize for the benefit of you and your company"/>
-            <meta property="og:image" content="images/LandingPagePortfolioWebsite.png"/>
+            <meta property="og:description" content="A road map of my academic and professional career"/>
+            <meta property="og:image" content="images/site-icon.png"/>
             <meta property="og:url" content="https://jacobdamiangraham.com"/>
             <meta property="og:site_name" content="Jacob Graham Portfolio"/>
             <link rel="canonical" href="https://jacobdamiangraham.com/#"/>
-            <link rel="stylesheet" href="styles/index.css"/>    
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="styles/index.css"/>
+            <script src="https://kit.fontawesome.com/d6b02088c1.js" crossorigin="anonymous"></script>
             <link rel="shortcut icon" href="images/site-icon.png" type="image/x-icon"/>
         </head>
 
         <body>
             <header id="header" class="header">
-
                 <input class="menu-btn" type="checkbox" id="menu-btn" />
                 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
                 <ul class="menu">
                     <li><img id="menu_links_image" src="images/site-icon.png" alt="My website logo embedded in the menu containing links to websites"/></li>
-                    <li><a href="#" data-section="#home"><i class="fa fa-user" title="Click this menu item to go to my portfolio's landing page."></i><span> Home</span></a></li>
-                    <li><a href="#" data-section="#about"><i class="fa fa-address-card" title="Click this menu item to go to my portfolio's about page, where you can find out more about me."></i><span> About</span></a></li>
-                    <li><a href="#" data-section="#projects"><i class="fa fa-code" title="Click this menu item to go to my portfolio's project page, where you can find out more about some of the projects I have worked on."></i><span> Projects</span></a></li>
+                    <li><a href="#" data-section="#home"><i class="fa fa-user" title="Click this menu item to go to my portfolio's landing page"></i><span> Home</span></a></li>
+                    <li><a href="#" data-section="#about"><i class="fa fa-address-card" title="Click this menu item to go to my portfolio's about page, where you can find out more about me"></i><span> About</span></a></li>
+                    <li><a href="#" data-section="#education"><i class="fa-solid fa-book" title="Click this menu item to go to my portfolio's project page, where you can find out more about my education"></i><span> Education</span></a></li>
+                    <li><a href="#" data-section="#projects"><i class="fa fa-code" title="Click this menu item to go to my portfolio's project page, where you can find out more about some of the projects I have worked on"></i><span> Projects</span></a></li>
                 </ul>
           
             </header>
@@ -42,14 +39,14 @@
                 <section id="home" class="website_section current_section_open">
                     <div id="personal_info">
                          <figure id="personal_picture_figure">
-                            <img src="images/good_personal_picture.jpg" alt="A picture of me" id="picture_of_me"/>
+                            <img src="images/GradPhoto.png" alt="A picture of me" id="grad_photo"/>
                             <figcaption>
                                 <h1>Jacob Graham</h1>
                             </figcaption>
                         </figure>
                     </div>
                     
-                    <div id="container">
+                    <div id="typeit_text_container">
                         <span id="text_container"><span id="text"></span></span>
                     </div>
                 <div id="social_media_container">
@@ -75,92 +72,23 @@
                     <span class="underline_for_h2"></span>
 
                     <div id="about_section_intro">
-                        <h3>My name is Jacob Graham, and I am a <span id="computer_science_student_sentence">computer science</span> student</h3>
+                        <h3>My name is Jacob Graham, and I am an <span id="computer_science_student_sentence">Honours Computer Science</span> graduate</h3>
                     </div>
-
-                    <aside id="getResumeButtonContainer">
-                        <button id="getResumeButton" role="button">
-                            My Resume
-                        </button>
-                    </aside>
 
                     <article id="about_me_article">
                         <p class="about_me_paragraph"><span class="about_me_paragraph_span"></span> 
-                            Hello there! I am currently an Honours Computer Science student in my fourth (senior) year in University with an intended graduation date of 
-                            May 2024. Because I am in a program offered by a partnership between Lakehead University and Georgian College, I will receive both a 
-                            Computer Programming diploma from Georgian College and an Honours Bachelor of Arts Computer Science degree from Lakehead University.  
+                            Hello! I am a recent Honours Computer Science graduate who graduated in June 2024 with first-class standing. I have an Honours
+                            Computer Science degree from Lakehead University, and a Computer Programming diploma from Georgian College.
                         </p>
 
                         <p class="about_me_paragraph"><span class="about_me_paragraph_span"></span> 
-                            I am a diligent and dynamic individual when tackling academic assignments, personal projects, and when contributing to work projects,
-                            able to effectively communicate my ideas with shareholders by explaining complex software applications and systems in an easily-understood manner. 
-                            My approach to teamwork is characterized by my collaborative mindset, valuing cooperation and mutual support. Additionally, I possess excellent
-                            communication skills, allowing me to engage effectively with stakeholders and clients.
+                            I am a diligent and dynamic individual with a strong academic background and hands-on experience in software development. My professional experience includes a Quality Engineering internship at TD Canada Trust, where I improved project completion time by 30% through enhanced documentation and increased code coverage by 15% with automated test suites. I also provided personalized academic support as a private tutor, helping students develop effective study strategies.
+                        </p>
 
-                            My software development journey encompasses the complete software lifecycle, from software and system design, implementation, and testing, to 
-                            creating pitches for key stakeholders regarding the software application. I have a versatile skill set encompassing various programming languages, 
-                            including Java, JavaScript, PHP, SQL, HTML5, CSS, and TypeScript. While my specialization lies in developing web and desktop applications, I am
-                            equally capable of creating mobile applications using Java. 
+                        <p class="about_me_paragraph"><span class="about_me_paragraph_span"></span> 
+                            My software development journey encompasses the complete software lifecycle, from design and implementation to testing and stakeholder presentations. I am proficient in multiple programming languages, including Java, JavaScript, PHP, SQL, HTML5, CSS, and TypeScript. My specialization lies in developing web and desktop applications, with additional experience in mobile application development using Java.
                         </p>
                     </article>
-
-                    <div id="education_and_learning_container">
-                        <div id="education_container">
-                            <h2 class="education_heading">My education</h2>
-                            <article id="education1" class="education_article">
-                                <small><i class="fa fa-calendar" aria-hidden="true"></i>
-                                        2020 - 2024 | Lakehead University</small>
-                                <h4>Honours Bachelor of Arts in Computer Science</h4><br>
-                                <p></p> <span class="current_learning"></span><div class="school_topics">
-
-                                    <ul style="list-style-type: none" class="topics">
-                                    
-                                    </ul>
-                                </div>
-                            </article>
-
-                            <article id="education2" class="education_article">
-                                <small><i class="fa fa-calendar" aria-hidden="true"></i>
-                                        2020 - 2022 | Georgian College</small>
-                                <h4>Computer Programming Diploma</h4><br>
-                                <p></p>
-                                    <span class="current_learning"></span>
-                                <div class="school_topics">
-                                    
-                                    <ul style="list-style-type: none" class="topics">
-                                        
-                                    </ul>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div id="learning_container">
-                            <h2 class="education_heading">My technologies</h2>
-                                <article id="current_learning1" class="learning_article">
-                                    <small><i class="fa fa-lightbulb-o"></i> Programming languages</small>
-                                    <h3>JavaScript, Java, TypeScript, PHP, HTML, CSS, SQL, NoSQL</h3>
-                                    <p></p>
-                                </article>
-                                
-                                <article id="current_learning2" class="learning_article">
-                                    <small><i class="fa fa-lightbulb-o"></i> Frameworks and libraries</small>
-                                    <h3>Java Spring, Node.js, Express.js</h3>
-                                    <p></p>
-                                </article>
-
-                                <article id="current_learning3" class="learning_article">
-                                    <small><i class="fa fa-lightbulb-o"></i> Tools</small>
-                                    <h3>Git, Linux, Docker, Maven, Jira, Agile, Confluence, Microsoft Office, Figma, Photoshop</h3>
-                                    <p></p>
-                                </article>
-
-                                <article id="current_learning3" class="learning_article">
-                                    <small><i class="fa fa-lightbulb-o"></i> Fundamentals</small>
-                                    <h3>Object Oriented Programming, Data Structures, Algorithms, MVC</h3>
-                                    <p></p>
-                                </article>
-                        </div>
-                    </div>
                 </section>
 
                 <section id="projects" class="website_section">
@@ -182,16 +110,6 @@
                                 <p><a href="https://github.com/JacobGraham02/StudentBotHelper" alt="A github uri link to my Student Bot Helper https://github.com/JacobGraham02/StudentBotHelper">Click here if you would like to learn more about Student Bot Helper by viewing the GitHub repository</a></p>
                             </article>
                         </div>
-                        
-                        <!-- <div id="project2" class="project_div">
-                            <figure>
-                                <img src="images/personal_project_nyt_api.png" alt="JavaFx application aimed at fetching users the most relevant articles from the New York Times Article Search API based on their inputs"/>
-                            </figure>  
-
-                            <article class="project_description">
-                                Hello there
-                            </article>
-                        </div> -->
                         
                         <div id="project3" class="project_div">
                             <figure>
@@ -220,6 +138,49 @@
                             </article>
                         </div>
                     </article>
+                </section>
+
+                <section id="education" class="website_section">
+                    <h2>Education</h2>
+                    <div id="education_and_learning_container">
+                        <div id="education_container"> 
+                            <div class="timeline-container">
+                                <div class="timeline">
+                                    <div class="timeline-item-container">
+                                        <div class="timeline-item" data-year="2024">
+                                            <article id="education1" class="education_article">
+                                                <span class="year">2022</span>
+                                                <h3>Georgian College</h3>
+                                                <p>Computer Programming Diploma</p>
+                                            </article>
+                                        </div>
+                                        <div class="education_content">
+                                            <ul class="education_content_list">
+                                                <li>Recipient for the 2021 and 2022 Dean's list with an academic average of over 84%</li>
+                                                <li>Relevant coursework: ASP.NET programming, Server-Side JavaScript</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item-container">
+                                        <div class="timeline-item" data-year="2024">
+                                            <article id="education2" class="education_article">
+                                                <span class="year">2024</span>
+                                                <h3>Lakehead University</h3>
+                                                <p>First-Class Honours Bachelor of Science Degree in Computer Science</p>
+                                            </article>
+                                        </div>
+                                        <div class="education_content">
+                                            <ul class="education_content_list">
+                                                <li>Recurring scholarship for an academic average of over 84%</li>
+                                                <li>Relevant coursework: Algorithms and Data Structures, Advanced Database, Advanced Java, Client-Side JavaScript</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
 
